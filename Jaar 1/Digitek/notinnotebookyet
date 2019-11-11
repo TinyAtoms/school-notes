@@ -1,0 +1,5 @@
+vs_community.exe --layout c:\vs2019  --add Microsoft.VisualStudio.Workload.NativeDesktop   --add Component.GitHub.VisualStudio  --add Microsoft.VisualStudio.Product.BuildTools --includeRecommended --includeOptional --lang en-US -p --nickname vs2019  --verify --fix
+  
+  
+  
+  RUN SAME COMMAND WITHout LAYOUT OPTION

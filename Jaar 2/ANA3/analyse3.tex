@@ -1,0 +1,205 @@
+
+
+\documentclass[17pt]{extarticle} % set to 12 when done
+
+\usepackage{outlines}
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{extsizes}
+
+\usepackage[margin=0.5in]{geometry}
+
+
+
+
+\begin{document}
+\newcommand\abs[1]{\left|#1\right|} % absolute
+\newcommand{\seq}[2][0]{\left\{ #2 \right\}_{n=#1}}
+% ^ newcommand, use like \seq[startingg_n]{sequence}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\section{Chapter 11, Sequences}
+
+
+
+
+Sequences are a kind of summation, written like
+
+$$
+    \seq[1]{n \over n+1}^\infty
+$$
+
+
+They can be alternating, meaning that $x_n$ is on the opposite side of $x_{n+1}$ for any n. Sequences are basically an ordered list of computed values, kinda like a function, but discrete instead of possibly continuous. Sequences can also depend on the previous term, which would make them recursive. A popular sequence like this is the fibionacci sequence:
+
+$$
+    \begin{aligned}
+        x_1 & = 0                          \\
+        x_2 & = 1                          \\
+        x_n & = \seq[1]{x_{n-1} + x_{n+2}} \\
+        \text{which gives}                 \\
+        \{0, 1, 1, 2, 3, 5, 8, \ldots\}
+    \end{aligned}
+$$
+
+
+A sequence $\seq{a_n}$ has a limit L and we write
+$$
+    \begin{aligned}
+        \lim_{n \to \infty} \seq{a_n = L}  \\
+        or                                 \\
+        a_n \to L \text{ as } n \to \infty \\
+    \end{aligned}
+$$
+If a sequence has a limit L, it can be said it converges to L, else it diverges.
+If $\seq{a_n}$ converges to L, then each $a_{n+1}$ is closer to L than $a_{n}$
+
+
+\begin{theorem*}[Th 5]
+    $$
+        \lim_{n\to \infty} = \infty
+    $$
+    for every positive number $M$, there is an integer N such that if $n >  N$, then $a_n > M$
+\end{theorem*}
+
+Example 1:
+$\seq{2n}, M=1000, N = 500$
+Dan is er voor elke $M > 1000, N \ge 500$
+
+
+
+\begin{theorem*}[Th 6]
+    if $\seq{a_n}, \seq{b_n}$  are convergent sequences and c is a constant, then the following limit laws apply
+\end{theorem*}
+
+$$
+    \begin{aligned}
+        \lim_{n \to \infty} a_n \pm b_m       & =  \lim_{n \to \infty} a_n \pm \lim_{n \to \infty} b_n                          \\
+        \lim_{n \to \infty} c a_n             & = c \lim_{n \to \infty} a_n                                                     \\
+        \lim_{n \to \infty}  ( a_n \cdot b_n) & = \lim_{n \to \infty}  a_n \cdot \lim_{n \to \infty}  b_n                       \\
+        \lim_{n \to \infty}  \frac{a_n}{b_n}  & = {\lim_{n \to \infty}  a_n \over \lim_{n \to \infty } b_n} if\ \lim b_n \neq 0 \\
+        \lim_{n \to \infty}  (a_n)^p          & = \left( \lim_{n \to \infty}  a_n \right)^p \text{if n and p } > 0
+    \end{aligned}
+$$
+
+All the normal limit laws apply as well, so review ana1.
+
+\begin{theorem*}[Squeeze th.]
+    Squeeze theorem also applies to sequences. of $a_n \leq b_n \leq c_n$ and $\lim a_n = \lim c_n = L$,
+    then $\lim b_n$ = L
+\end{theorem*}
+
+\begin{theorem*}[Th 6]
+    If lim $\abs{a_n}$ = 0, then lim $a_n$ = 0
+\end{theorem*}
+
+See examples in notebook.
+
+\begin{theorem*}[Th 7]
+    if $\lim a_n = L$, and if $f(x)$ is continuous at $L$, then lim $f(a_n) = f(L)$
+
+\end{theorem*}
+
+\begin{theorem*}
+    $\seq{a_n}$ is increasing if $a_n < a_{n+1}$ for all $n > 0$,\\
+    is decreasing if $a_n < a_{n-1}$ for all $n > 0$,\\
+    is monotonic if it's only decreasing or increasing
+
+\end{theorem*}
+
+\begin{definition}
+    $\seq{a_n}$ is bounded ${above \over below}$ if there is a number $M$ such that $a_n$ is always ${below \over above} M$ for all n
+\end{definition}
+
+\begin{theorem*}[Th 12, Monotonic sequence theorem]
+    Every bounded monotone sequence is convergent
+
+\end{theorem*}
+
+
+\newpage
+\section{Chapter 11.2, Sequences}
+
+A series is just a summation of a sequence. An infinite series is a summation of an  infinite sequence, usually noted like
+$$
+\sum^\infty_{n=1}a_n\ or\ \sum a_n
+$$
+
+Furthermore, we can also have partial sums, denoted as $S_n$. This is defined as 
+$$
+S_n = \sum^n_{n=1} = a_1 + a_2 + \ldots + a_n
+$$
+
+If given a series $S_n$, we can compute $a_n$ by subtracting $S_n$ with $S_{n-1}$. \\
+Example:
+
+$$
+\begin{aligned}
+    S_n &= {n+1 \over n+10} \\
+S_{n-1} &= {n \over n+9} \\
+a_n &= S_n - S_{n-1}  \\
+&=  {n+1 \over n+10} - {n \over n+9} \\
+&= {9 \over (n +9) (n + 10)}
+\end{aligned}
+$$
+
+
+We can also compute $a_k$ for any integer constant k, given an $S_n$ by subtracting $S_k$ by $S_{k-1}$. \\
+Example: 
+Calculate $a_7$ for the given $S_n$:
+$$
+\begin{aligned}
+    S_n &= {n + 1 \over n + 10} \\
+    a_7 &= S_7 - S_6 = {8\over 17} - {7 \over 16} = {9\over 272}
+\end{aligned}
+$$
+
+\begin{theorem*}
+    given a series $S_n = \sum a_n$, we can compute if it diverges or converges, and where it does so 
+    by computing the limit of $s_n$ as n goes to infinity. Or more math-y: 
+    $$
+    \lim_{n\to \infty} S_n = L\\
+    $$
+    if $L \neq \infty , S_n $ converges to L.
+
+\end{theorem*}
+
+
+\subsection{Geometric series}
+Geometric series are a special kind of series written in the following form:
+$$
+\sum^\infty_{n=0} a(r)^k
+$$
+Example: 
+$$
+S_n = 8 + {8 \over 3} + {8 \over 9} + {8 \over 27} + \ldots \\
+S_n = 8 ({1\over 3})^n
+$$
+
+The special property of these is that for any $r \in <-1, 1>$, 
+$$
+\sum^\infty a(r)^k = {a \over 1 - r}
+$$
+If r $\not\in <-1, 1>$, then $S_n$ diverges.
+
+
+\subsection{Divergence/convergence tests}
+There are several tests to see whether a series diverges or not. 
+The first one is the n'th term test. This one does not guarantee that if a series passes this test, that it converges.
+But it does guarantee that if it fails the test, that it diverges.
+
+\begin{theorem*}{Divergence test} \\
+    If
+    $$
+    \lim_{n \to \infty} a_n \neq 0, 
+     \sum^\infty a_n 
+    $$ 
+    will diverge.
+\end{theorem*}
+This makes sense, because if $a_n$ diverges to a nonzero value, as n approaches infinity, you'd be summing up that value infinity times, 
+which does reach infinity. And if there is no limit, it obviously can't converge.
+\end{document}

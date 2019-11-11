@@ -1,0 +1,7 @@
+N = 100
+t = arange(0, 2, 0.01)
+xN = full(200, 5, float) # creates an array with size 200 filled with 5, type float
+factor = -40/ (pi * pi)
+for n in range(1, N+1):
+    xN += factor*cos((2 * n - 1) * pi * t) / ((2*n -1) ** 2)
+plot(t, xN)
