@@ -240,3 +240,6 @@ De verschillen tussen v(t) en **V** zijn:
 3. v(t) is altijd reel, zonder complexe term, maar **V** is meestal complex.
 
 Ten slotte is het belangrijk om bij te houden dat je phasor analyse alleen kan gebruiken als je frequentie, dus je $\omega$ constant blijft.
+
+
+
