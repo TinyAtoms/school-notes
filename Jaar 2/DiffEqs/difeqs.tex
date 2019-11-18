@@ -1,0 +1,101 @@
+
+
+\documentclass[17pt]{extarticle} % set to 12 when done
+
+\usepackage{outlines}
+\usepackage{graphicx} % Add pictures to your document
+\usepackage{listings} % Source code formatting and highlighting
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{extsizes}
+
+\usepackage[margin=0.5in]{geometry}
+
+
+
+
+\begin{document}
+\newcommand\abs[1]{\left|#1\right|} % absolute
+\newcommand{\seq}[2][0]{\left\{ #2 \right\}_{n=#1}}
+% ^ newcommand, use like \seq[startingg_n]{sequence}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{definition}{Definition}
+
+\section{Chapter 1, differential equations}
+
+Differential equations(DEs) are equations in the form of 
+$$
+y'' + 2ty' + sin(t)y = ln(t)
+$$
+Basically, an equation that has one or more deratives in it.
+
+we can use the following conventions to write the derative:
+$$
+\begin{aligned}
+    y' = y \\
+y'(x) = y(x) \\
+y'(t) = y(t) \\
+{dy\over dt} = y(t)
+\end{aligned}
+$$
+
+differential equations have an order. the order is the highest derative.
+Also note that the n'th derative for n>2 is written like $y^{(n)}$
+an example would be the following:
+$a y^{(5)} + b y^{(3)} + y'' + 2y = y$, where the order is 5.
+
+Differential equations can be linear or not. 
+to be linear, a function has to be in the following form: 
+$$
+ay'' + by' = cy
+$$
+where a,b,c can be any sin, cos, tan, ln, etc of any variable. As long as the y part is linear, meaning no
+ln(y), sin(y), $y^2$, etc
+
+\newpage
+\section{Solving DEs}
+First, we have to determine the type of DE. There are lots, but here are the basic ones:
+
+\subsection{seperable DEs}
+If we can split the DE in the following form:
+$$
+(ay + by ){dy \over dx} = (at + bt)
+$$
+Basically, if you can seperate the y's and the t's to different sides.
+The strategy is then to just integrate both sides to  y or t (depending on the side)
+
+\subsection{Linear DEs}
+If the equation is or can be written in the standard form 
+$$
+{dy\over dt} + p(t) y= g(t)
+$$
+
+Then we can multiply both sides by $u(t)$, where it is the following:
+$$
+u(t) = e^{\int p(t)dt} \\
+\text{which should deliver} \\
+u(t) {dy\over dt} + u(t) p(t) y = u(t) g(t)
+$$
+if done correctly, then 
+$$
+u(t) {dy\over dt} + u(t) p(t) y = [p(t) y]'
+$$
+then integrate the right side to t, and bring u(t) y back. 
+like this:
+$$
+u(t) y = \int u(t) g(t) dt
+$$
+then make it an explicit function of y if asked, and determine what c is, if you have a starting value.
+
+
+\end{document}
+
+
+
+
+
+
+
+
+

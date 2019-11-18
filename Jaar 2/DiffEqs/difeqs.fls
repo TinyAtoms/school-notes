@@ -1,9 +1,9 @@
-PWD c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3
+PWD c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs
 INPUT c:/texlive/2019/texmf.cnf
 INPUT c:/texlive/2019/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.tex
-OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.log
+INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.tex
+OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.log
 INPUT c:/texlive/2019/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT c:/texlive/2019/texmf-dist/tex/latex/extsizes/extarticle.cls
 INPUT c:/texlive/2019/texmf-dist/tex/latex/extsizes/size17.clo
@@ -58,9 +58,9 @@ INPUT c:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT c:/texlive/2019/texmf-dist/tex/generic/ifxetex/ifxetex.sty
-INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.aux
-INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.aux
-OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.aux
+INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.aux
+INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.aux
+OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.aux
 INPUT c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2019/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
@@ -94,17 +94,14 @@ INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmti12.tfm
-INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.pdf
+OUTPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.pdf
 INPUT c:/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
 INPUT c:/texlive/2019/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/ANA3/analyse3.aux
+INPUT c:/Users/MassiveAtoms/Desktop/notes-ADEK/Jaar 2/DiffEqs/difeqs.aux
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-INPUT c:/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
