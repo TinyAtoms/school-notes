@@ -8,6 +8,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{extsizes}
+\usepackage{amsfonts} 
 
 \usepackage[margin=0.5in]{geometry}
 
@@ -27,7 +28,7 @@
 
 
 
-Sequences are a kind of summation, written like
+Sequences are a kind of summation, written in the following form:
 
 $$
     \seq[1]{n \over n+1}^\infty
@@ -50,7 +51,7 @@ $$
 A sequence $\seq{a_n}$ has a limit L and we write
 $$
     \begin{aligned}
-        \lim_{n \to \infty} \seq{a_n = L}  \\
+        \lim_{n \to \infty} \seq{a_n} = L  \\
         or                                 \\
         a_n \to L \text{ as } n \to \infty \\
     \end{aligned}
@@ -63,7 +64,7 @@ If $\seq{a_n}$ converges to L, then each $a_{n+1}$ is closer to L than $a_{n}$
     $$
         \lim_{n\to \infty} = \infty
     $$
-    for every positive number $M$, there is an integer N such that if $n >  N$, then $a_n > M$
+    For every positive number $M$, there is an integer N such that if $n >  N$, then $a_n > M$
 \end{theorem*}
 
 Example 1:
@@ -73,7 +74,7 @@ Dan is er voor elke $M > 1000, N \ge 500$
 
 
 \begin{theorem*}[Th 6]
-    if $\seq{a_n}, \seq{b_n}$  are convergent sequences and c is a constant, then the following limit laws apply
+    If $\seq{a_n}, \seq{b_n}$  are convergent sequences and c is a constant, then the following limit laws apply
 \end{theorem*}
 
 $$
@@ -89,7 +90,7 @@ $$
 All the normal limit laws apply as well, so review ana1.
 
 \begin{theorem*}[Squeeze th.]
-    Squeeze theorem also applies to sequences. of $a_n \leq b_n \leq c_n$ and $\lim a_n = \lim c_n = L$,
+    Squeeze theorem also applies to sequences. If $a_n \leq b_n \leq c_n$ and $\lim a_n = \lim c_n = L$,
     then $\lim b_n$ = L
 \end{theorem*}
 
@@ -100,7 +101,7 @@ All the normal limit laws apply as well, so review ana1.
 See examples in notebook.
 
 \begin{theorem*}[Th 7]
-    if $\lim a_n = L$, and if $f(x)$ is continuous at $L$, then lim $f(a_n) = f(L)$
+    If $\lim a_n = L$, and if $f(x)$ is continuous at $L$, then lim $f(a_n) = f(L)$
 
 \end{theorem*}
 
@@ -124,7 +125,7 @@ See examples in notebook.
 \newpage
 \section{Chapter 11.2, Sequences}
 
-A series is just a summation of a sequence. An infinite series is a summation of an  infinite sequence, usually noted like
+A series is just a summation of a sequence. An infinite series is a summation of an  infinite sequence, usually noted in the following forms:
 $$
 \sum^\infty_{n=1}a_n\ or\ \sum a_n
 $$
@@ -159,7 +160,7 @@ $$
 $$
 
 \begin{theorem*}
-    given a series $S_n = \sum a_n$, we can compute if it diverges or converges, and where it does so 
+    Given a series $S_n = \sum a_n$, we can compute if it diverges or converges, and where it does so 
     by computing the limit of $s_n$ as n goes to infinity. Or more math-y: 
     $$
     \lim_{n\to \infty} S_n = L\\
@@ -212,6 +213,58 @@ But it does guarantee that if it fails the test, that it diverges.
 This makes sense, because if $a_n$ diverges to a nonzero value, as n approaches infinity, you'd be summing up that value infinity times, 
 which does reach infinity. And if there is no limit, it obviously can't converge.
 
+\begin{theorem*}{P-series test}\\
+    A series in the form $\sum {1\over n^p}$ is called a p-series, and converges for all $p > 1$
+\end{theorem*}
+
+\begin{theorem*}{Integral test}\\
+    If f(n) is a cont, decreasing function on [1, $\infty$], then $\sum^\infty_{n=k} f(n)$ converges 
+    iff $\int_k^\infty f(x)dx$ converges(returns a real, non infinite number)\\
+    Furthermore, if $R_n = S - S_n$, 
+if given a continuous, decreasing function f(n) and $\sum f(n)$ converges, 
+then 
+$$
+\int^\infty_{n+1} f(n) dn \leq R_n \leq \int^\infty_n f(n) dn
+$$ 
+    
+\end{theorem*}
+
+\begin{theorem*}{Comparison test} \\
+Given an $\sum a_n \text{ and } \sum b_n$ where $a_n, b_n > 0$ and $a_n < b_n$, if $b_n$ converges, $a_n$ converges too. \\
+Conversely, if $a_n$ diverges, so does $b_n$.\\
+
+\end{theorem*}
+
+\begin{theorem*}{Limit comparison test}\\
+    Given an $a_n, b_n$,  and both are positive for all $n \in \mathbb{N}$\\
+    if $\lim_{n \to \infty} {a_n \over b_n} = \text{L where } L \in \mathbb{R^+}$, then they both converge or diverge. 
+    
+\end{theorem*}  
+
+\begin{theorem*}{Alternating series test}\\
+    Given a series $\sum a_n$ where $a_n = (-1)^n \cdot b_n \text{ or } (-1)^{n +1} \cdot b_n$ \\
+     where $b_n > 0$ and $\lim b_n = 0$ and $b_n$ is decreasing, $\sum a_n$ converges 
+    
+\end{theorem*}
+\newpage
+\begin{theorem*}{Ratio test}\\
+    Given a series $\sum a_n$, if 
+    $$
+    \begin{aligned}
+        \lim \abs{a_{n+1} \over a_n} = L \\
+        then if \\
+        L < 1 \to \text{series converges}\\
+        L > 1 \to \text{series diverges}\\
+        L = 1 \to \text{inconclusive}\\
+    \end{aligned}
+    $$
+    
+\end{theorem*}
+
+\subsection*{Conditional and absolute convergence}
+Given a series $\sum a_n$, \\
+if it converges but $\sum \abs{a_n}$ diverges, we say that it \textbf{converges conditionally}. \\
+If $\sum \abs{a_n}$ converges too, we speak of \textbf{absolute convergence}.
 \end{document}
 
 

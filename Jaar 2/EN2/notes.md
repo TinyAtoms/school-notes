@@ -16,7 +16,7 @@ $$
 
 # integreren
 $$
-\int v dt = {1\over j\omega} V = - \omega V  
+\int v dt = {1\over j\omega} V = -j {1 \over \omega} V  
 $$
 (delen door j is vermenigvuldigen met -j)
 
@@ -24,7 +24,7 @@ $$
 $$
 A = r e^{j \theta} \rightarrow Aj = r e^{j (\theta  + 90)}
 $$
-
+Basically, vermenigvuldigen met j is phase shiften met 90 graden.
 
 # Solving of diffEqs with phasors, example
 $$
@@ -38,16 +38,24 @@ I = {50 \angle 75 \over 4 - 10j} &= 4,64 \angle 143
 \end{aligned}
 $$
 
-# Multiplying by j is phase shifting by 90 deg.
-
-
 # Phasor relationships
 
-## resistors
-$$
-V = I R = R im(cos(wt + \theta)) = R I_m \angle \theta
-$$
+| element 	| Freq domain 	| Time domain 	|
+|---------	|-------------	|-------------	|
+| R       	|$\mathbb{V} = R \mathbb{I}$| V = Ri|
+| L       	|$\mathbb{V} = jwL \mathbb{I}$|v = L ${di \over dt}$|
+| C       	|$\mathbb{V} = {I\over jwC}$|i = C $dV \over dt$|
 
-## Inductors
-Assume $I = Im(cos(w t + \theta )$
-TOBECONTINUED
+
+# Impedance
+$$
+\begin{aligned}
+    Impedance(\mathcal{Z}) &= \mathbb{V \over I} = (Z_r + Z_L +Z_C ) \Omega \\
+    \text{where:} \\
+    \mathcal{Z_R} &= R \\
+    \mathcal{Z_L} &= j\omega L \\
+    \mathcal{Z_C} &= {1 \over j \omega C}
+\end{aligned}
+$$
+We can alsso express z in complex rectangular form ($R + j x$) where x = reactance.  
+Or we could just express it as $Z = |z| \angle \theta$
