@@ -40,7 +40,7 @@ y'(t) = y(t) \\
 \end{aligned}
 $$
 
-differential equations have an order. the order is the highest derative.
+DEs have an order, and the order is the highest derative.
 Also note that the n'th derative for n>2 is written like $y^{(n)}$
 an example would be the following:
 $a y^{(5)} + b y^{(3)} + y'' + 2y = y$, where the order is 5.
@@ -57,7 +57,7 @@ ln(y), sin(y), $y^2$, etc
 \section{Solving DEs}
 First, we have to determine the type of DE. There are lots, but here are the basic ones:
 
-\subsection{seperable DEs}
+\subsection{Seperable DEs}
 If we can split the DE in the following form:
 $$
 (ay + by ){dy \over dx} = (at + bt)
@@ -71,24 +71,46 @@ $$
 {dy\over dt} + p(t) y= g(t)
 $$
 
-Then we can multiply both sides by $u(t)$, where it is the following:
+Then we can multiply both sides by $u(t)$, where u(t) is the following:  
+
 $$
-u(t) = e^{\int p(t)dt} \\
-\text{which should deliver} \\
-u(t) {dy\over dt} + u(t) p(t) y = u(t) g(t)
+\begin{aligned}
+u(t) &= e^{\int p(t)dt} \\
+\text{Which should deliver} \\
+u(t) {dy\over dt} + u(t) p(t) y = u(t) g(t)   
+\end{aligned}
 $$
-if done correctly, then 
+If done correctly, then the following holds true:
 $$
 u(t) {dy\over dt} + u(t) p(t) y = [p(t) y]'
 $$
-then integrate the right side to t, and bring u(t) y back. 
+The next step is to integrate the right side to t, and bring u(t) y back. 
 like this:
 $$
 u(t) y = \int u(t) g(t) dt
 $$
-then make it an explicit function of y if asked, and determine what c is, if you have a starting value.
+The final step is to make it an explicit function of y if asked, and to determine what C is if given a starting value.
 
+\subsection{Homogenous DEs}
+If the equation can be written in the form of 
+$$
+{dy \over dx} = f({y \over x})
+$$
 
+This is most often done by factoring out an $x^n$
+We then substitute every \textbf{${y\over x}$} with \textbf{v}, and \textbf{y'} with \textbf{v' x + v}
+We then make it into a seperable DE with the Vs on one side, and the Xs on the other, integrate both sides and then substitute the v back with ${y \over x}$
+\subsection{Exact DEs}
+A DE is exact if we can put it in the following form:
+$$
+\begin{aligned}
+    M dx + N dy &= 0\\
+    \text{where } \frac{\partial M}{\partial y} &= {\partial N \over \partial x}
+\end{aligned}
+$$
+
+When that's done, 
+*NOTE, ASK JOSH FOR CORRECT NOTES*
 \end{document}
 
 
