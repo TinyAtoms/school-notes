@@ -109,8 +109,89 @@ $$
 \end{aligned}
 $$
 
+
 When that's done, 
-*NOTE, ASK JOSH FOR CORRECT NOTES*
+\textbf{*NOTE, ASK JOSH FOR CORRECT NOTES*}
+
+
+\subsection{Uniqueness and existence of a solution}
+How do we know if a DE has a solution, and better yet, that it's unique?
+For linear DEs, we do the following:
+
+\begin{theorem}
+    given a DE $y' + p(t)y = g(t)$ and a starting value $y(t_0) = y_0$
+    If p(t) and g(t) are continuous on interval I where $t_0 \in I$, then there is 
+    an unique solution in this interval. 
+\end{theorem}
+
+For non linear DEs, we use the following:
+\begin{theorem}
+    Given the following: $y' = f(t, y), y(t_0) = y_0$
+    If f and ${\partial f \over \partial y}$ are continuous in a rectangle $S : \alpha < t < \beta , j < y < k $ where 
+    $t_0 \in S$, then there exists a unique solution in some interval I where $t_0 \in I, \alpha < I < \beta$
+
+\end{theorem}
+\newpage
+\section{2nd order DEs}
+The standard form for these is 
+$$
+y" + p(t)y' + q(t) y = g(t)
+$$
+If g(t) = 0, then the DE is said to be homogenous. This should not be confused with homogenous 1st order DEs, where it means something completely different.
+Anyway, when not homogenous, it is inhomogenous.
+
+To solve homogenous $n^{th}$ order DEs, we do this:
+
+1. From the DE, we derive the characteristic equation:
+ $$
+ \begin{aligned}
+    ay" + by' + c y = 0 \\
+    a \lambda^2 + b \lambda + c = 0 \\  
+ \end{aligned}
+ $$
+2. Solve for $\lambda$ 
+
+$$
+\begin{aligned}
+    a \lambda^2 + b \lambda + c = 0 \\
+    (\lambda + d) (\lambda - f) = 0\\
+    \lambda = -d \lor \lambda = f
+\end{aligned}
+$$
+3. from the solutions, we get the solution for y
+$$
+\begin{aligned}
+    \lambda = -d \lor \lambda = f \\
+    y(t) = A e^{-d} + B e^{f} 
+\end{aligned}
+$$
+4. To solve for the unknown constants, we use the starting values.
+
+\subsection{Imaginary lambdas}
+We can get values for lambda such as $\lambda = 1 \pm 2 i$. 
+For these, the solution would be 
+$$
+\begin{aligned}
+    y(t) = a e^{1+ 2i} + b e^{1-2i} \\
+    y(t) = a e^1 e^{2i} + b e^1 e^{-2i} \\
+    y(t) = a e^1 cos(2t) + b e^1 sin(2t)
+\end{aligned}
+$$
+\subsection{Repeated roots}
+
+When solving for lambda, you could get an equation like this:
+$(\lambda - 2)^3 (\lambda-5)^2 = 0$
+The solution would then be
+$$
+y(t) = A e^{2t} + B t e^{2t} + C t^2 e^{2t} + D e^{5t} + E t e^{5t}
+$$
+
+\subsection{existence and uniqueness for 2nd order linear DEs}
+Given a 2nd order DE y" + p(t)y' + q(t) y = g(t), then there exists a unique solution if 
+p(t), g(t), g(t) are continuous on interval I where $t_n \in I$ 
+
+
+
 \end{document}
 
 
